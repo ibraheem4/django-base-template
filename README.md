@@ -29,15 +29,15 @@ You will need the following things installed on your computer.
 After cloning the repository, install Python packages using `pipenv`.
 
 - `git clone <repository-url>`
-- `cd ourplace-api`
+- `cd {{ project_name }}`
 - `yarn generate-ssl` (installs `mkcert` via `homebrew` then generates a public/private key pair at `ssl/`)
-- `yarn pipenv:install` (installs Python virtual environment at `ourplace-api/.venv`)
+- `yarn pipenv:install` (installs Python virtual environment at `{{ project_name }}/.venv`)
 
 ## Running / Development [](#running-developing)
 
 ### Setup Database [](#setup-database)
 
-Generate a SQLite database (`ourplace-api/{{ project_name }}/db.sqlite3`) and load initial fixture data.
+Generate a SQLite database (`{{ project_name }}/{{ project_name }}/db.sqlite3`) and load initial fixture data.
 
 - `yarn migrate:run-syncdb`
 - `yarn load-initial-data`
