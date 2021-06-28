@@ -1,0 +1,30 @@
+{
+  "name": "django-base-template",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "This is a Django project template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibraheem4/django-base-template.git"
+  },
+  "author": "Ibraheem Abdul-Malik <ibraheem4@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "collectstatic": "pipenv run python manage.py collectstatic",
+    "coverage:html": "pipenv run coverage html",
+    "generate-ssl": "sh ./scripts/generate-ssl-certificate.sh",
+    "kill:osx": "lsof -t -i tcp:8000 | xargs kill -9",
+    "lint": "DJANGO_SETTINGS_MODULE={{ project_name }}.settings pipenv run pylint --load-plugins pylint_django {{ project_name }}/**/*.py manage.py",
+    "load-initial-data": "pipenv run python manage.py loaddata {{ project_name }}_sites users_users socialaccount_socialapp_sites socialaccount_socialapp",
+    "migrate": "pipenv run python manage.py migrate",
+    "migrate:run-syncdb": "pipenv run python manage.py migrate --run-syncdb",
+    "pipenv:install": "pipenv run pipenv install",
+    "start": "pipenv run daphne -e ssl:8000:privateKey=ssl/server.key:certKey=ssl/server.crt {{ project_name }}.asgi:application",
+    "start:ssl-disabled": "pipenv run daphne {{ project_name }}.asgi:application",
+    "test": "pipenv run pytest"
+  },
+  "engines": {
+    "node": "10.* || >= 12"
+  }
+}

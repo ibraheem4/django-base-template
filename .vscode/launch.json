@@ -1,0 +1,52 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start Django SSL",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/.venv/bin/daphne",
+      "args": [
+        "{{ project_name }}.asgi:application",
+        "-e",
+        "ssl:8000:privateKey=ssl/server.key:certKey=ssl/server.crt"
+      ],
+      "django": true,
+      "justMyCode": false
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome SSL",
+      "url": "https://localhost:8000",
+      "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "webRoot": "${workspaceFolder}",
+      "userDataDir": false,
+      "trace": true
+    },
+    {
+      "name": "Start Django",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/.venv/bin/daphne",
+      "args": [
+        "{{ project_name }}.asgi:application"
+      ],
+      "django": true,
+      "justMyCode": false
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:8000",
+      "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "webRoot": "${workspaceFolder}",
+      "userDataDir": false,
+      "trace": true
+    },
+  ]
+}

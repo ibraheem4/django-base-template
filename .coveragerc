@@ -1,0 +1,23 @@
+[run]
+omit =
+    .*
+    test*.py
+    *test*.py
+    */tests/*
+    *apps.py
+    */migrations/*.py
+    */urls.py
+    */permissions.py
+    */filters.py
+    */serializers.py
+    */context_processors.py
+    */settings/*
+    manage.py
+    {{ project_name }}/asgi.py
+    {{ project_name }}/wsgi.py
+    api/models.py
+    api/admin.py
+
+[report]
+exclude_lines =
+    def __str__(self):

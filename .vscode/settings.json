@@ -1,0 +1,14 @@
+{
+  "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint",
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
+    "--enable=W0614"
+  ]
+}
