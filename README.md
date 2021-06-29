@@ -2,6 +2,16 @@
 
 *NOTE:* This app is designed to run on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
 
+# Generate new project [](#generate-new-project)
+
+**Generate a new project from this template.**
+
+For example, for a project named `django_template_demo` in a directory called `django-template-demo`, run this command:
+
+```
+mygitg && mkdir django-template-demo && cd django-template-demo && django-admin startproject --template=https://github.com/ibraheem4/django-base-template/archive/master.zip django_template_demo . && find . -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;' \ && git init && hub create -p && git add --all && git commit -m "Initial commit" && git push origin master && hub browse
+```
+
 # Quickstart [](#quickstart)
 
 `yarn generate-ssl && yarn pipenv:install && yarn migrate:run-syncdb && yarn collectstatic && yarn start`
