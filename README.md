@@ -88,3 +88,7 @@ Perform linting.
 ### Include `.env` [](#include-dotenv)
 
 Include `.env` file to set environment variables.  `.env.example` is included as an example.
+
+### Using the Git commit template
+
+    git config commit.template .gitmessage
