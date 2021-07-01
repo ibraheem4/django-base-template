@@ -37,27 +37,39 @@ git push origin master && \
 hub browse
 ```
 
-## Run this project [](#run-this-project)
+## Run the demo [](#run-the-demo)
 
-**Update template variables in all files, then run [quickstart](#quickstart)**
+### Update template variables [](#update-template-variables)
+
+Update template variables in all files (excluding README), then run the [setup commands](#setup-commands) commands, then start the project.
+
+- `yarn demo:update`
+
+### Setup commands [](#setup-commands)
+
+Generate SSL scripts, install Python packages, migrate databases, and collect static files before running the server.
 
 ```
-find . -not -iwholename '*.git*' -not -name 'README.md' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/project_name/g;'
+yarn generate-ssl && \
+yarn pipenv:install && \
+yarn migrate:run-syncdb && \
+yarn collectstatic
 ```
 
-**Undo updating of template variables**
+Run the server.
 
-```
-find . -not -iwholename '*.git*' -not -name 'README.md' -type f -print0 | xargs -0 perl -pi -w -e 's/project_name/\{\{ project_name \}\}/g;'
-```
+- `yarn start`
 
-## Quickstart [](#quickstart)
+Verify project is serving on localhost.
 
-`yarn generate-ssl && yarn pipenv:install && yarn migrate:run-syncdb && yarn collectstatic && yarn start`
-
-- user: `test@test.com`, pass: `TestPassword`
 - Visit your API at [https://localhost:8000/api](https://localhost:8000/api)
 - Visit the Django admin at [https://localhost:8000/admin](https://localhost:8000/admin)
+
+### Restore template variables [](#restore-template-variables)
+
+Run the `demo:restore` command to restore template variables after running the demo.
+
+- `yarn demo:restore`
 
 ## Installation [](#installation)
 
