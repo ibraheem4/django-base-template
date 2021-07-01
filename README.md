@@ -24,11 +24,10 @@ hub browse
 
 # Run this project [](#run-this-project)
 
-**Update template variables in all files, then run `yarn start`**
+**Update template variables in all files, then run [quickstart](#quickstart)**
 
 ```
-find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/project_name/g;' \ && \
-yarn start
+find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/project_name/g;' \
 ```
 
 **Undo updating of template variables**
