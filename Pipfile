@@ -8,6 +8,7 @@ pycodestyle = "*"
 
 [packages]
 cryptography = "3.3.2"
+django = ">=3.1.12"
 djangorestframework = "*"
 djangorestframework-simplejwt = "==4.6.0"
 dj-rest-auth = {extras = ["with_social"],version = "*"}
