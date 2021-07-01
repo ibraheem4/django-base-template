@@ -2,7 +2,22 @@
 
 *NOTE:* This app is designed to run on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
 
-# Generate new project [](#generate-new-project)
+## Prerequisites [](#prerequisites)
+
+1. Buy an Apple computer.
+2. Install the following on your computer.
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Django](https://www.djangoproject.com/)
+- [Python](https://www.python.org/)
+- [Pipenv](https://pypi.org/project/pipenv/)
+- [Google Chrome](https://google.com/chrome/)
+- [Homebrew](https://brew.sh)
+- [Perl](https://www.perl.org)
+
+## Generate new project [](#generate-new-project)
 
 **Generate a new project from this template.**
 
@@ -22,7 +37,7 @@ git push origin master && \
 hub browse
 ```
 
-# Run this project [](#run-this-project)
+## Run this project [](#run-this-project)
 
 **Update template variables in all files, then run [quickstart](#quickstart)**
 
@@ -36,28 +51,13 @@ find . -not -iwholename '*.git*' -not -name 'README.md' -type f -print0 | xargs 
 find . -not -iwholename '*.git*' -not -name 'README.md' -type f -print0 | xargs -0 perl -pi -w -e 's/project_name/\{\{ project_name \}\}/g;'
 ```
 
-# Quickstart [](#quickstart)
+## Quickstart [](#quickstart)
 
 `yarn generate-ssl && yarn pipenv:install && yarn migrate:run-syncdb && yarn collectstatic && yarn start`
 
 - user: `test@test.com`, pass: `TestPassword`
 - Visit your API at [https://localhost:8000/api](https://localhost:8000/api)
 - Visit the Django admin at [https://localhost:8000/admin](https://localhost:8000/admin)
-
-
-## Prerequisites [](#prerequisites)
-
-You will need the following things installed on your computer.
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/)
-- [Yarn](https://yarnpkg.com/)
-- [Django](https://www.djangoproject.com/)
-- [Python](https://www.python.org/)
-- [Pipenv](https://pypi.org/project/pipenv/)
-- [Google Chrome](https://google.com/chrome/)
-- [Homebrew](https://brew.sh)
-- [Perl](https://www.perl.org)
 
 ## Installation [](#installation)
 
@@ -69,6 +69,10 @@ After cloning the repository, install Python packages using `pipenv`.
 - `yarn pipenv:install` (installs Python virtual environment at `{{ project_name }}/.venv`)
 
 ## Running / Development [](#running-developing)
+
+### Include `.env` [](#include-dotenv)
+
+Include `.env` file to set environment variables.  `.env.example` is included as an example.
 
 ### Setup Database [](#setup-database)
 
@@ -100,10 +104,6 @@ Perform linting.
 
 - `yarn lint`
 
-### Include `.env` [](#include-dotenv)
-
-Include `.env` file to set environment variables.  `.env.example` is included as an example.
-
-### Using the Git commit template
+### Git commit template [](#git-commit-template)
 
     git config commit.template .gitmessage
