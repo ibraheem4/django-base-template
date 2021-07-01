@@ -57,6 +57,7 @@ You will need the following things installed on your computer.
 - [Pipenv](https://pypi.org/project/pipenv/)
 - [Google Chrome](https://google.com/chrome/)
 - [Homebrew](https://brew.sh)
+- [Perl](https://www.perl.org)
 
 ## Installation [](#installation)
 
