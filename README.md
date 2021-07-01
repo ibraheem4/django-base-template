@@ -13,13 +13,28 @@ mygitg && \
 mkdir django-template-demo && \
 cd django-template-demo && \
 django-admin startproject --template=https://github.com/ibraheem4/django-base-template/archive/master.zip django_template_demo . && \
-find . -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;' \ && \
+find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;' \ && \
 git init && \
 hub create -p && \
 git add --all && \
 git commit -m "Initial commit" && \
 git push origin master && \
 hub browse
+```
+
+# Run this project [](#run-this-project)
+
+**Update template variables in all files, then run `yarn start`**
+
+```
+find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/project_name/g;' \ && \
+yarn start
+```
+
+**Undo updating of template variables**
+
+```
+find . -not -iwholename '*.git*' -type f -not -path '*/\.git/*'; -print0 | xargs -0 perl -pi -w -e 's/project_name/\{\{ project_name \}\}/g;' \
 ```
 
 # Quickstart [](#quickstart)
@@ -57,7 +72,7 @@ After cloning the repository, install Python packages using `pipenv`.
 
 ### Setup Database [](#setup-database)
 
-Generate a SQLite database (`{{ project_name }}/{{ project_name }}/db.sqlite3`) and load initial fixture data.
+Generate a SQLite database (`django_base_template/django_base_template/db.sqlite3`) and load initial fixture data.
 
 - `yarn migrate:run-syncdb`
 - `yarn load-initial-data`
