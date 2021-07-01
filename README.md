@@ -71,15 +71,6 @@ Run the `demo:restore` command to restore template variables after running the d
 
 - `yarn demo:restore`
 
-## Installation [](#installation)
-
-After cloning the repository, install Python packages using `pipenv`.
-
-- `git clone <repository-url>`
-- `cd {{ project_name }}`
-- `yarn generate-ssl` (installs `mkcert` via `homebrew` then generates a public/private key pair at `ssl/`)
-- `yarn pipenv:install` (installs Python virtual environment at `{{ project_name }}/.venv`)
-
 ## Running / Development [](#running-developing)
 
 ### Include `.env` [](#include-dotenv)
