@@ -34,7 +34,7 @@ yarn start
 **Undo updating of template variables**
 
 ```
-find . -not -iwholename '*.git*' -type f -not -path '*/\.git/*'; -print0 | xargs -0 perl -pi -w -e 's/project_name/\{\{ project_name \}\}/g;' \
+find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/project_name/\{\{ project_name \}\}/g;' \
 ```
 
 # Quickstart [](#quickstart)
