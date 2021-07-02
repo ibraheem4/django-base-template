@@ -1,0 +1,102 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2i$v=19$m=512,t=2,p=2$azQzSFVKdFI0Y1d6$c+YxlCi51uzCiAsYFI2p4Q",
+      "last_login": "2021-02-09T03:31:17.544Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-08-02T23:33:23.142Z",
+      "email": "test@test.com",
+      "language": "en-us",
+      "dark_mode": false,
+      "username": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "argon2$argon2i$v=19$m=512,t=2,p=2$RUc4QlpDYXRibmZs$YtqDQ3TdfZPaApRspvMz3Q",
+      "last_login": "2021-02-09T03:32:08.906Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-08-02T23:33:23.142Z",
+      "email": "ali@test.com",
+      "language": "ar",
+      "dark_mode": true,
+      "username": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "argon2$argon2i$v=19$m=512,t=2,p=2$RjJES0tzTjhxeHZN$lZeDip4G0rzI93RuK+W0eA",
+      "last_login": "2021-02-09T03:32:16.311Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-08-02T23:33:23.142Z",
+      "email": "pierre@test.com",
+      "language": "fr-fr",
+      "dark_mode": false,
+      "username": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "argon2$argon2i$v=19$m=512,t=2,p=2$RFBQd3JscktqUHdz$2dW7ME09myL5Wm9QNDhIfA",
+      "last_login": "2021-02-09T03:32:31.306Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-08-02T23:33:23.142Z",
+      "email": "jose@test.com",
+      "language": "es-es",
+      "dark_mode": true,
+      "username": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "!ARxGwp23AVZs0yhrktnpAnfzPDYiYibjfvaeHjJ1",
+      "last_login": "2020-08-03T14:05:47.755Z",
+      "is_superuser": false,
+      "first_name": "Open",
+      "last_name": "User",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-08-02T23:41:19.839Z",
+      "email": "open@test.com",
+      "language": "en-us",
+      "dark_mode": false,
+      "username": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

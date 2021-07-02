@@ -1,0 +1,18 @@
+{% extends "rest_framework/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    {{ settings.PROJECT_NAME }}
+{% endblock %}
+
+{% block branding %}
+    <a class='navbar-brand' rel="nofollow" href="{% url 'index' %}">
+        <span class="logo-text">{{ settings.PROJECT_NAME }} API</span>
+    </a>
+{% endblock %}
+
+{% block style %}
+    {{ block.super }}
+    <link rel="icon" href="{% static "assets/images/favicon.ico" %}">
+{% endblock %}
