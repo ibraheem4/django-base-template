@@ -1,0 +1,17 @@
+name: Asset Sizes
+'on':
+  - pull_request
+jobs:
+  build:
+    name: Calculate asset sizes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the entire repo
+        uses: actions/checkout@v2-beta
+        with:
+          fetch-depth: 0
+      - name: Compare asset sizes
+        uses: chrysanthos/simple-asset-size-reporter@1.0.0
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          files: '["api/**/*.py"]'
