@@ -68,7 +68,7 @@ Run the `demo:update` command to update template variables in all files (excludi
 - `yarn demo:update`
 - Run [quickstart](#quickstart)
 
-### Restore template variables [](#restore-template-variables)
+#### Restore template variables [](#restore-template-variables)
 
 Run the `demo:restore` command to restore the template variables after running the `django-base-template` project.
 
