@@ -16,6 +16,7 @@
 - [Google Chrome](https://google.com/chrome/)
 - [Homebrew](https://brew.sh)
 - [Perl](https://www.perl.org)
+- [hub](https://github.com/github/hub)
 
 ## Generate new project [](#generate-new-project)
 
