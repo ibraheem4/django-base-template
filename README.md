@@ -63,10 +63,10 @@ The template variables must first be replaced with a valid project name (e.g. `p
 
 #### Update template variables [](#update-template-variables)
 
-Run the `demo:update` command to update template variables in all files (excluding .git folder, README), then run the [quickstart](#quickstart) commands to start up the server.
+Run the `demo:update` command to update template variables in all files (excluding .git folder, README), then run the [quickstart](#quickstart-) commands to start up the server.
 
 - `yarn demo:update`
-- Run [quickstart](#quickstart)
+- Run [quickstart](#quickstart-)
 
 #### Restore template variables [](#restore-template-variables)
 
