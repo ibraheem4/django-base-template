@@ -1,6 +1,6 @@
 # django-base-template
 
-*NOTE:* This app is designed to run on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
+*NOTE:* This app runs on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
 
 ## Prerequisites [](#prerequisites)
 
@@ -18,9 +18,9 @@
 - [Perl](https://www.perl.org)
 - [hub](https://github.com/github/hub)
 
-## Generate new project [](#generate-new-project)
+## Spawning a new project [](#spawning-a-new-project)
 
-**Generate a new project from this template.**
+**Spawn a new project from this template.**
 
 For example, for a project named `django_template_demo` in a directory called `django-template-demo`, run these commands:
 
@@ -57,20 +57,22 @@ Verify project is serving on localhost.
 
 ## Running / Development [](#running-developing)
 
-### Run the demo [](#run-the-demo)
+### Running the template itself [](#running-the-template-itself)
 
-In order to run the `django-base-template` project, the template variables (e.g. `project_name`) must first be replaced with the new project's name.
+The template variables must first be replaced with a valid project name (e.g. `project_name`) to run the `django-base-template` project itself.
 
 #### Update template variables [](#update-template-variables)
 
-Run the script to update template variables in all files (excluding README), then run the [quickstart](#quickstart) commands to start the project.
+Run the `demo:update` command to update template variables in all files (excluding .git folder, README), then run the [quickstart](#quickstart) commands to start up the server.
 
 - `yarn demo:update`
 - Run [quickstart](#quickstart)
 
 ### Restore template variables [](#restore-template-variables)
 
-Run the `demo:restore` command to restore template variables after running the demo.
+Run the `demo:restore` command to restore the template variables after running the `django-base-template` project.
+
+**IMPORTANT:** do this before committing to version control to ensure template variables have not been changed.
 
 - `yarn demo:restore`
 
@@ -100,7 +102,7 @@ Run some tests.
 - `yarn test`
 - `yarn coverage:html`
 
-> Open `htmlcov/index.html` in web browser.
+> Open `htmlcov/index.html` in the web browser.
 
 ### Linting [](#linting)
 
