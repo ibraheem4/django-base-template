@@ -37,41 +37,41 @@ git push origin master && \
 hub browse
 ```
 
-## Run the demo [](#run-the-demo)
+## Quickstart [](#quickstart)
 
-### Update template variables [](#update-template-variables)
-
-Update template variables in all files (excluding README), then run the [setup commands](#setup-commands) commands, then start the project.
-
-- `yarn demo:update`
-
-### Setup commands [](#setup-commands)
-
-Generate SSL scripts, install Python packages, migrate databases, and collect static files before running the server.
+Generate SSL scripts, install Python packages, migrate databases, collect static files, run  the server.
 
 ```
 yarn generate-ssl && \
 yarn pipenv:install && \
 yarn migrate:run-syncdb && \
-yarn collectstatic
+yarn collectstatic && \
+yarn start
 ```
-
-Run the server.
-
-- `yarn start`
 
 Verify project is serving on localhost.
 
 - Visit your API at [https://localhost:8000/api](https://localhost:8000/api)
 - Visit the Django admin at [https://localhost:8000/admin](https://localhost:8000/admin)
 
+## Running / Development [](#running-developing)
+
+### Run the demo [](#run-the-demo)
+
+In order to run the `django-base-template` project, the template variables (e.g. `project_name`) must first be replaced with the new project's name.
+
+#### Update template variables [](#update-template-variables)
+
+Run the script to update template variables in all files (excluding README), then run the [quickstart](#quickstart) commands to start the project.
+
+- `yarn demo:update`
+- Run [quickstart](#quickstart)
+
 ### Restore template variables [](#restore-template-variables)
 
 Run the `demo:restore` command to restore template variables after running the demo.
 
 - `yarn demo:restore`
-
-## Running / Development [](#running-developing)
 
 ### Include `.env` [](#include-dotenv)
 
