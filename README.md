@@ -40,13 +40,14 @@ hub browse
 
 ## Quickstart [](#quickstart)
 
-Generate SSL scripts, install Python packages, migrate databases, collect static files, run  the server.
+Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
 
 ```
 yarn generate-ssl && \
 yarn pipenv:install && \
 yarn migrate:run-syncdb && \
 yarn collectstatic && \
+yarn load-fixtures && \
 yarn start
 ```
 
@@ -85,7 +86,7 @@ Include `.env` file to set environment variables.  `.env.example` is included as
 Generate a SQLite database (`django_base_template/django_base_template/db.sqlite3`) and load initial fixture data.
 
 - `yarn migrate:run-syncdb`
-- `yarn load-initial-data`
+- `yarn load-fixtures`
 
 ### Collect static files [](#collect-static-files)
 

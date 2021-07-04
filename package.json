@@ -18,7 +18,7 @@
     "generate-ssl": "sh ./scripts/generate-ssl-certificate.sh",
     "kill:osx": "lsof -t -i tcp:8000 | xargs kill -9",
     "lint": "DJANGO_SETTINGS_MODULE={{ project_name }}.settings pipenv run pylint --load-plugins pylint_django {{ project_name }}/**/*.py manage.py",
-    "load-initial-data": "pipenv run python manage.py loaddata {{ project_name }}_sites users_users socialaccount_socialapp_sites socialaccount_socialapp",
+    "load-fixtures": "pipenv run python manage.py loaddata {{ project_name }}_sites users_users socialaccount_socialapp_sites socialaccount_socialapp",
     "migrate": "pipenv run python manage.py migrate",
     "migrate:run-syncdb": "pipenv run python manage.py migrate --run-syncdb",
     "pipenv:install": "pipenv run pipenv install",
