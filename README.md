@@ -18,6 +18,24 @@
 - [Perl](https://www.perl.org)
 - [hub](https://github.com/github/hub)
 
+## Quickstart [](#quickstart)
+
+Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
+
+```
+yarn generate-ssl && \
+yarn pipenv:install && \
+yarn migrate:run-syncdb && \
+yarn collectstatic && \
+yarn load-fixtures && \
+yarn start
+```
+
+Verify project is serving on localhost.
+
+- Visit your API at [https://localhost:8000/api](https://localhost:8000/api)
+- Visit the Django admin at [https://localhost:8000/admin](https://localhost:8000/admin)
+
 ## Spawning a new project [](#spawning-a-new-project)
 
 **Spawn a new project from this template.**
@@ -37,24 +55,6 @@ git commit -m "Initial commit" && \
 git push origin master && \
 hub browse
 ```
-
-## Quickstart [](#quickstart)
-
-Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
-
-```
-yarn generate-ssl && \
-yarn pipenv:install && \
-yarn migrate:run-syncdb && \
-yarn collectstatic && \
-yarn load-fixtures && \
-yarn start
-```
-
-Verify project is serving on localhost.
-
-- Visit your API at [https://localhost:8000/api](https://localhost:8000/api)
-- Visit the Django admin at [https://localhost:8000/admin](https://localhost:8000/admin)
 
 ## Running / Development [](#running-developing)
 
