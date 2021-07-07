@@ -40,14 +40,19 @@ Verify project is serving on localhost.
 
 **Spawn a new project from this template.**
 
-For example, for a project named `django_template_demo` in a directory called `django-template-demo`, run these commands:
+For example, for a project named `django_template_demo` in a directory called `$HOME/django-template-demo`, run these commands:
 
 ```
 mygitg && \
-mkdir django-template-demo && \
-cd django-template-demo && \
+mkdir $HOME/django-template-demo && \
+cd $HOME/django-template-demo && \
 django-admin startproject --template=https://github.com/ibraheem4/django-base-template/archive/master.zip django_template_demo . && \
-find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;' \ && \
+find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;' \
+```
+
+To publish the repo to GitHub you can do the following:
+
+```
 git init && \
 hub create -p && \
 git add --all && \
