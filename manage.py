@@ -7,9 +7,11 @@ import sys
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                          '{{ project_name }}.settings')
+                          '{{ {{ project_name }} }}.settings')
     try:
+        # pylint:disable=import-outside-toplevel
         from django.core.management import execute_from_command_line
+        # pylint:enable=import-outside-toplevel
     except ImportError as exc:
         raise ImportError(
             "Couldn't import Django. Are you sure it's installed and "
