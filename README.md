@@ -20,6 +20,8 @@
 
 ## Quickstart [](#quickstart)
 
+Add dotenv file(s) (e.g. `.env.development`) by duplicating `.env.example`.
+
 Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
 
 ```
@@ -49,6 +51,9 @@ cd $HOME/django-template-demo && \
 django-admin startproject --template=https://github.com/ibraheem4/django-base-template/archive/master.zip django_template_demo . && \
 find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;'
 ```
+
+> - Note `mygitg` is an alias command to ensure the Git user is set correctly.
+> - `alias mygitg='git config --global user.email '\''example@example.com'\'''`
 
 2. Run [quickstart](#quickstart-)
 
