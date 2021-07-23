@@ -11,5 +11,7 @@
     "pylint_django",
     "--enable=W0614",
     "--disable=django-not-configured",
-  ]
+  ],
+  "python.formatting.provider": "black",
+  "python.linting.pycodestyleEnabled": false
 }

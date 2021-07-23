@@ -28,3 +28,4 @@ twisted = {extras = ["http2", "tls"],version = "*"}
 django-dotenv = "*"
 pyjwt = "==1.7.1"
 argon2-cffi = "*"
+pylint = "*"
