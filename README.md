@@ -20,7 +20,9 @@
 
 ## Quickstart [](#quickstart)
 
-Add dotenv file(s) (e.g. `.env.development`) by duplicating `.env.example`.
+### Include `.env` [](#include-dotenv)
+
+Include `.env` file to set environment variables.  `.env.example` is included as an example.
 
 Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
 
@@ -88,10 +90,6 @@ Run the `demo:restore` command to restore the template variables after running t
 **IMPORTANT:** do this before committing to version control to ensure template variables have not been changed.
 
 - `yarn demo:restore`
-
-### Include `.env` [](#include-dotenv)
-
-Include `.env` file to set environment variables.  `.env.example` is included as an example.
 
 ### Setup Database [](#setup-database)
 
