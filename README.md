@@ -24,6 +24,8 @@
 
 Include `.env` file to set environment variables.  `.env.example` is included as an example.
 
+### Run startup scripts [](#run-startup-scripts)
+
 Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
 
 ```
