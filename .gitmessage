@@ -1,4 +1,6 @@
-Subject Line - REQUIRED
+<type>[optional scope]: <description>
+#
+# Using Conventional Commits (https://www.conventionalcommits.org)
 #
 # Please provide your commit's subject above this line.
 #
@@ -15,9 +17,10 @@ Subject Line - REQUIRED
 # Description of your commit should go below. Make sure to leave
 # one empty line after your description.
 #
-
-Details
-- OPTIONAL
-
-Testing
-- OPTIONAL
+# [optional body]
+# Details
+# - OPTIONAL
+#
+# [optional footer]
+# Testing
+# - OPTIONAL
