@@ -8,10 +8,10 @@
 
 # Type:
 
-#    build      (bulding project)
+#    build      (building project, upgrade/downgrade dependencies)
 #    ci         (changing ci workflows)
-#    chore      (updating grunt tasks etc; no production code change)
-#    docs       (changes to documentation)
+#    chore      (updating yarn tasks etc; no production code change)
+#    docs       (changes to documentation, README)
 #    feat       (new feature)
 #    fix        (bug fix)
 #    perf       (performance improvements)
