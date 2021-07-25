@@ -43,6 +43,8 @@ jobs:
       - name: Update template variables
         run: |
           yarn demo:update
+      - name: Run Linting
+        run: yarn lint
       - name: Run tests
         run: |
           yarn test
