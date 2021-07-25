@@ -24,6 +24,12 @@
 
 Include `.env` file to set environment variables.  `.env.example` is included as an example.
 
+### Update template variables [](#update-template-variables)
+
+Run the `demo:update` command to update template variables in all files (excluding .git folder, README), then run the [quickstart](#quickstart-) commands to start up the server.
+
+- `yarn demo:update`
+
 ### Run startup scripts [](#run-startup-scripts)
 
 Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
@@ -77,13 +83,6 @@ hub browse
 ### Running the template itself [](#running-the-template-itself)
 
 The template variables must first be replaced with a valid project name (e.g. `project_name`) to run the `django-base-template` project itself.
-
-#### Update template variables [](#update-template-variables)
-
-Run the `demo:update` command to update template variables in all files (excluding .git folder, README), then run the [quickstart](#quickstart-) commands to start up the server.
-
-- `yarn demo:update`
-- Run [quickstart](#quickstart-)
 
 #### Restore template variables [](#restore-template-variables)
 
