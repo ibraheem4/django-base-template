@@ -125,3 +125,7 @@ Perform linting.
 ### Git commit template [](#git-commit-template)
 
     git config commit.template .gitmessage
+
+## Further Reading / Useful Links [](#further-reading-useful-links)
+
+- [Conventional Commits](https://www.conventionalcommits.org)
