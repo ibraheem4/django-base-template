@@ -13,5 +13,9 @@
     "--disable=django-not-configured",
   ],
   "python.formatting.provider": "black",
-  "python.linting.pycodestyleEnabled": false
+  "python.linting.pycodestyleEnabled": false,
+  "files.associations": {
+      "**/templates/**/*.html": "django-html",
+      "**/templates/**/*": "django-txt",
+  }
 }

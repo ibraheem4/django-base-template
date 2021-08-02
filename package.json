@@ -11,15 +11,17 @@
   "author": "Ibraheem Abdul-Malik <ibraheem4@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "black": "pipenv run black manage.py apps/ project_name/",
     "collectstatic": "pipenv run python manage.py collectstatic",
     "coverage:html": "pipenv run coverage html",
     "demo:update": "find . -not -iwholename '*.git*' -not -name 'README.md' -type f -print0 | xargs -0 perl -pi -w -e 's/\\{\\{ project_name \\}\\}/project_name/g;'",
     "demo:restore": "find . -not -iwholename '*.git*' -not -name 'README.md' -not -name 'package.json' -type f -print0 | xargs -0 perl -pi -w -e 's/project_name/\\{\\{ project_name \\}\\}/g;'",
     "generate-ssl": "sh ./scripts/generate-ssl-certificate.sh",
-    "isort": "pipenv run isort --profile black manage.py apps/ project_name/",
     "kill:osx": "lsof -t -i tcp:8000 | xargs kill -9",
-    "lint": "pipenv run pylint --load-plugins pylint_django --disable=django-not-configured project_name/**/*.py manage.py",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
+    "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
+    "lint:pylint": "pipenv run pylint --load-plugins pylint_django --disable=django-not-configured project_name/**/*.py manage.py",
+    "lint:black:fix": "pipenv run black manage.py apps/ project_name/",
+    "lint:isort:fix": "pipenv run isort --profile black manage.py apps/ project_name/",
     "load-fixtures": "pipenv run python manage.py loaddata project_name_sites users_users socialaccount_socialapp_sites socialaccount_socialapp",
     "migrate": "pipenv run python manage.py migrate",
     "migrate:run-syncdb": "pipenv run python manage.py migrate --run-syncdb",
@@ -35,5 +37,8 @@
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
     "husky": "7.0.1"
+  },
+  "dependencies": {
+    "npm-run-all": "4.1.5"
   }
 }
