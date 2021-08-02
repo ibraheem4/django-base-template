@@ -7,10 +7,11 @@
   "python.linting.pylintEnabled": true,
   "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint",
   "python.linting.pylintArgs": [
+    "--enable=unused-wildcard-import",
+    "--disable=missing-docstring",
+    "--disable=django-not-configured",
     "--load-plugins",
     "pylint_django",
-    "--enable=W0614",
-    "--disable=django-not-configured",
   ],
   "python.formatting.provider": "black",
   "python.linting.pycodestyleEnabled": false,

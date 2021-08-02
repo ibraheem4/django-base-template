@@ -18,20 +18,21 @@ from .serializers import UserSerializer
 UserModel = get_user_model()
 
 
-class UserListView(viewsets.ModelViewSet):
+class UserListView(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
     queryset = UserModel.objects.get_queryset().order_by("id")
     serializer_class = UserSerializer
     allowed_methods = ["GET", "OPTIONS", "PATCH"]
     filterset_class = UserFilter
+    # pylint: disable=duplicate-code
     parser_classes = (
         JSONAPIParser,
         MultiPartParser,
         FormParser,
-    )
+    )  # pylint: disable=duplicate-code
     renderer_classes = (
         JSONAPIRenderer,
         BrowsableAPIRenderer,
-    )
+    )  # pylint: disable=duplicate-code
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
 
 

@@ -9,19 +9,20 @@ from rest_framework_json_api.renderers import JSONRenderer as JSONAPIRenderer
 from .serializers import SiteSerializer
 
 
-class SiteListView(viewsets.ModelViewSet):
+class SiteListView(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
     queryset = Site.objects.get_queryset().order_by("id")
     allowed_methods = ["GET", "OPTIONS"]
     serializer_class = SiteSerializer
+    # pylint: disable=duplicate-code
     parser_classes = (
         JSONAPIParser,
         MultiPartParser,
         FormParser,
-    )
+    )  # pylint: disable=duplicate-code
     renderer_classes = (
         JSONAPIRenderer,
         BrowsableAPIRenderer,
-    )
+    )  # pylint: disable=duplicate-code
 
 
 def index(request):

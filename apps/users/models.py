@@ -22,7 +22,7 @@ class User(AbstractUser):
 
     objects = UserManager()
 
-    class JSONAPIMeta:
+    class JSONAPIMeta:  # pylint: disable=too-few-public-methods
         resource_name = "users"
         JSON_API_PLURALIZE_TYPES = True
 

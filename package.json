@@ -19,7 +19,7 @@
     "kill:osx": "lsof -t -i tcp:8000 | xargs kill -9",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
-    "lint:pylint": "pipenv run pylint --load-plugins pylint_django --disable=django-not-configured project_name/**/*.py manage.py",
+    "lint:pylint": "pipenv run pylint --enable=unused-wildcard-import --disable=missing-docstring --disable=django-not-configured --load-plugins pylint_django apps/**/*.py project_name/**/*.py manage.py",
     "lint:black:fix": "pipenv run black manage.py apps/ project_name/",
     "lint:isort:fix": "pipenv run isort --profile black manage.py apps/ project_name/",
     "load-fixtures": "pipenv run python manage.py loaddata project_name_sites users_users socialaccount_socialapp_sites socialaccount_socialapp",
