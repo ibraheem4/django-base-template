@@ -123,13 +123,14 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 EMAIL_HOST = os.environ.get("EMAIL_HOST", "localhost").strip()
 EMAIL_USE_TLS = bool(os.environ.get("EMAIL_USE_TLS", False))
 EMAIL_PORT = int(os.environ.get("EMAIL_HOST_PORT", 25))
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "").strip()
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "").strip()
+DEFAULT_FROM_EMAIL = "Fixme Example <noreply@example.com>"
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",
