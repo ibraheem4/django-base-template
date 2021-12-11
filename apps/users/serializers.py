@@ -4,7 +4,7 @@ from rest_framework_json_api import serializers
 UserModel = get_user_model()
 
 
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):  # pylint: disable=too-many-ancestors
     class Meta:
         model = UserModel
         fields = (
