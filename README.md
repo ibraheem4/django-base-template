@@ -30,6 +30,10 @@ Run the `demo:update` command to update template variables in all files (excludi
 
 - `yarn demo:update`
 
+### Update FIXME [](#update-fixme)
+
+Find and replace any instances of `FIXME`.
+
 ### Run startup scripts [](#run-startup-scripts)
 
 Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
