@@ -52,12 +52,12 @@ Verify project is serving on localhost.
 
 **Spawn a new project from this template.**
 
-1. For a project named `django_template_demo` in a directory called `$HOME/django-template-demo`, run these commands:
+1. For a project named `django_template_demo` in a directory called `$HOME/Projects/django-template-demo`, run these commands:
 
 ```
 mygitg && \
-mkdir $HOME/django-template-demo && \
-cd $HOME/django-template-demo && \
+mkdir $HOME/Projects/django-template-demo && \
+cd $HOME/Projects/django-template-demo && \
 django-admin startproject --template=https://github.com/ibraheem4/django-base-template/archive/master.zip django_template_demo . && \
 find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;'
 ```
