@@ -24,12 +24,6 @@
 
 Include `.env` file to set environment variables.  `.env.example` is included as an example.
 
-### Update template variables [](#update-template-variables)
-
-Run the `demo:update` command to update template variables in all files (excluding .git folder, README), then run the [quickstart](#quickstart-) commands to start up the server.
-
-- `yarn demo:update`
-
 ### Update FIXME [](#update-fixme)
 
 Find and replace any instances of `FIXME`.

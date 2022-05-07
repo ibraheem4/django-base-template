@@ -44,9 +44,6 @@ jobs:
         if: steps.cache-venv.outputs.cache-hit != 'true'
         run: |
           pipenv install --dev --skip-lock
-      - name: Update template variables
-        run: |
-          yarn demo:update
       - name: 'Setup Node.js ${{ matrix.node-version }}'
         uses: actions/setup-node@v1
         with:
