@@ -52,36 +52,6 @@ Verify project is serving on localhost.
 - Visit your API at [https://localhost:8000/api](https://localhost:8000/api)
 - Visit the Django admin at [https://localhost:8000/admin](https://localhost:8000/admin)
 
-## Spawning a new project [](#spawning-a-new-project)
-
-**Spawn a new project from this template.**
-
-1. For a project named `django_template_demo` in a directory called `$HOME/Projects/django-template-demo`, run these commands:
-
-```
-mygitg && \
-mkdir $HOME/Projects/django-template-demo && \
-cd $HOME/Projects/django-template-demo && \
-django-admin startproject --template=https://github.com/ibraheem4/django-base-template/archive/master.zip django_template_demo . && \
-find . -not -iwholename '*.git*' -type f -print0 | xargs -0 perl -pi -w -e 's/\{\{ project_name \}\}/django_template_demo/g;'
-```
-
-> - Note `mygitg` is an alias command to ensure the Git user is set correctly.
-> - `alias mygitg='git config --global user.email '\''example@example.com'\'''`
-
-2. Run [quickstart](#quickstart-)
-
-3. Publish the repo to GitHub using the following commands:
-
-```
-git init && \
-hub create -p && \
-git add --all && \
-git commit -m "Initial commit" && \
-git push origin master && \
-hub browse
-```
-
 ## Running / Development [](#running-developing)
 
 ### Running the template itself [](#running-the-template-itself)

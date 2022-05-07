@@ -13,8 +13,8 @@ omit =
     */context_processors.py
     */settings/*
     manage.py
-    {{ project_name }}/asgi.py
-    {{ project_name }}/wsgi.py
+    project_name/asgi.py
+    project_name/wsgi.py
     api/models.py
     api/admin.py
 

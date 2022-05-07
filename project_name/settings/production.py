@@ -1,5 +1,5 @@
 """
-Django settings for {{ project_name }} project.
+Django settings for project_name project.
 
 Use in production.
 """

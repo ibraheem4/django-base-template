@@ -1,4 +1,4 @@
-"""{{ project_name }} URL Configuration
+"""project_name URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -46,8 +46,8 @@ urlpatterns = [
     url(
         r"^openapi/$",
         get_schema_view(
-            title="{{ project_name }} API",
-            description="API backend for {{ project_name }}",
+            title="project_name API",
+            description="API backend for project_name",
             version="1.0.0",
             generator_class=SchemaGenerator,
         ),

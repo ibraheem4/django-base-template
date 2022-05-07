@@ -10,7 +10,7 @@
       "request": "launch",
       "program": "${workspaceFolder}/.venv/bin/daphne",
       "args": [
-        "{{ project_name }}.asgi:application",
+        "project_name.asgi:application",
         "-e",
         "ssl:8000:privateKey=ssl/server.key:certKey=ssl/server.crt"
       ],
@@ -33,7 +33,7 @@
       "request": "launch",
       "program": "${workspaceFolder}/.venv/bin/daphne",
       "args": [
-        "{{ project_name }}.asgi:application"
+        "project_name.asgi:application"
       ],
       "django": true,
       "justMyCode": false

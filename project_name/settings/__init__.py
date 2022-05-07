@@ -1,5 +1,5 @@
 """
-Django settings for {{ project_name }} project.
+Django settings for project_name project.
 
 Default settings set to local.
 """

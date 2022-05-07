@@ -1,5 +1,5 @@
 """
-Django settings for {{ project_name }} project.
+Django settings for project_name project.
 
 Base settings.
 """
@@ -48,7 +48,7 @@ SIMPLE_JWT = {
     "UPDATE_LAST_LOGIN": True,
 }
 
-PROJECT_NAME = "{{ project_name }}"
+PROJECT_NAME = "project_name"
 
 TEMPLATES[0]["OPTIONS"]["context_processors"] = [
     "django.template.context_processors.debug",

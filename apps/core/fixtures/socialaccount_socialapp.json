@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "provider": "google",
-      "name": "{{ project_name }}",
+      "name": "project_name",
       "client_id": "FIXME_PUBLIC",
       "secret": "FIXME_SECRET",
       "key": "",
@@ -16,7 +16,7 @@
     "pk": 2,
     "fields": {
       "provider": "facebook",
-      "name": "{{ project_name }}",
+      "name": "project_name",
       "client_id": "FIXME_PUBLIC",
       "secret": "FIXME_SECRET",
       "key": "",
