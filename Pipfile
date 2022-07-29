@@ -27,7 +27,7 @@ djangorestframework-jsonapi = "*"
 daphne = "*"
 twisted = {extras = ["http2", "tls"],version = "*"}
 django-dotenv = "*"
-pyjwt = "==1.7.1"
+pyjwt = "==2.4.0"
 argon2-cffi = "*"
 pylint = "*"
 pylint-django = "*"
