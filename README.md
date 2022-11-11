@@ -30,16 +30,16 @@ Find and replace any instances of `FIXME`.
 
 ### Run startup scripts [](#run-startup-scripts)
 
-Generate SSL scripts, install Python packages, migrate databases, collect static files, load fixtures, run  the server.
+```
+sh scripts/startup-script.sh
+```
 
-```
-yarn generate-ssl && \
-yarn pipenv:install && \
-yarn migrate:run-syncdb && \
-yarn collectstatic && \
-yarn load-fixtures && \
-yarn start
-```
+1. Generate SSL scripts
+2. Install Python packages
+3. Migrate databases
+4. Collect static files
+5. Load fixtures
+6. Run the server
 
 Verify project is serving on localhost.
 
