@@ -20,7 +20,7 @@
     "lint:pylint": "pipenv run pylint --enable=unused-wildcard-import --disable=missing-docstring --disable=django-not-configured --load-plugins pylint_django apps/**/*.py project_name/**/*.py manage.py",
     "lint:black:fix": "pipenv run black manage.py apps/ project_name/",
     "lint:isort:fix": "pipenv run isort --profile black manage.py apps/ project_name/",
-    "load-fixtures": "pipenv run python manage.py loaddata project_name_sites users_users socialaccount_socialapp_sites socialaccount_socialapp",
+    "load-fixtures": "pipenv run python manage.py loaddata project_name_sites users_users todos_todos socialaccount_socialapp_sites socialaccount_socialapp",
     "migrate": "pipenv run python manage.py migrate",
     "migrate:run-syncdb": "pipenv run python manage.py migrate --run-syncdb",
     "pipenv:install": "pipenv run pipenv install",
