@@ -18,6 +18,7 @@ if DEBUG is True:
 
 INSTALLED_APPS += (
     "django.contrib.sites",
+    # Third-party
     "django_filters",
     "corsheaders",
     "rest_framework",
@@ -30,8 +31,10 @@ INSTALLED_APPS += (
     "allauth.socialaccount",
     "allauth.socialaccount.providers.facebook",
     "allauth.socialaccount.providers.google",
+    # Local
     "apps.core",
     "apps.users",
+    "apps.todos",
 )
 AUTH_USER_MODEL = "users.User"
 REST_USE_JWT = True
