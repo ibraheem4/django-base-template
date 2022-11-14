@@ -25,7 +25,6 @@ from rest_framework.schemas.openapi import SchemaGenerator
 from apps.api.views import api_router
 from apps.core import views as core_views
 from apps.users import views as user_views
-from apps.todos import views as todo_views
 
 urlpatterns = [
     url(r"^accounts/", include("allauth.urls"), name="socialaccount_signup"),
@@ -54,10 +53,6 @@ urlpatterns = [
         ),
         name="openapi-schema",
     ),
-    # url(r"^api/todos/<int:pk>/", todo_views.ToDoDetailView.as_view()),
-    # url(r"^api/todos/", todo_views.ToDoListView.as_view(), name="todos"),
-    # url(r"^api/todos/create", todo_views.ToDoCreateView.as_view()),
-    # url(r"^api/todos/delete/<int:pk>/", todo_views.ToDoDeleteView.as_view()),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += i18n_patterns(
