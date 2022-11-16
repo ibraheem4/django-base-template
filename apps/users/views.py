@@ -18,7 +18,7 @@ from .serializers import UserSerializer
 UserModel = get_user_model()
 
 
-class UserListView(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
+class UserViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
     queryset = UserModel.objects.get_queryset().order_by("id")
     serializer_class = UserSerializer
     allowed_methods = ["GET", "OPTIONS", "PATCH"]

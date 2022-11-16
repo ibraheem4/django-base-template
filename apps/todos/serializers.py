@@ -1,8 +1,8 @@
 from rest_framework_json_api import serializers
-from apps.todos.models import ToDo
+from apps.todos.models import Todo
 
 
-class ToDoSerializer(serializers.ModelSerializer):  # pylint: disable=too-many-ancestors
+class TodoSerializer(serializers.ModelSerializer):  # pylint: disable=too-many-ancestors
     class Meta:
-        model = ToDo
+        model = Todo
         fields = ("id", "title", "description", "date", "completed")

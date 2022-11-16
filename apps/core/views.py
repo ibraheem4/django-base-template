@@ -9,7 +9,7 @@ from rest_framework_json_api.renderers import JSONRenderer as JSONAPIRenderer
 from .serializers import SiteSerializer
 
 
-class SiteListView(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
+class SiteViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
     queryset = Site.objects.get_queryset().order_by("id")
     allowed_methods = ["GET", "OPTIONS"]
     serializer_class = SiteSerializer

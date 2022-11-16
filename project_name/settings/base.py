@@ -17,6 +17,7 @@ if DEBUG is True:
     }
 
 INSTALLED_APPS += (
+    # Django
     "django.contrib.sites",
     # Third-party
     "django_filters",

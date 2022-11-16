@@ -31,6 +31,7 @@ Find and replace any instances of `FIXME`.
 ### Run startup scripts [](#run-startup-scripts)
 
 ```
+sh scripts/ssl-script.sh && \ # Only on initial setup
 sh scripts/startup-script.sh
 ```
 

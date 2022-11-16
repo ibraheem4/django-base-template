@@ -1,26 +1,8 @@
-from rest_framework import generics, viewsets
-from apps.todos.serializers import ToDoSerializer
-from apps.todos.models import ToDo
-
-# Create your views here.
-# CRUD Operations
+from rest_framework import viewsets
+from apps.todos.serializers import TodoSerializer
+from apps.todos.models import Todo
 
 
-class ToDoListView(viewsets.ModelViewSet):  # Read # pylint: disable=too-many-ancestors
-    queryset = ToDo.objects.all()
-    serializer_class = ToDoSerializer
-
-
-class ToDoDetailView(generics.RetrieveUpdateAPIView):  # Update
-    queryset = ToDo.objects.all()
-    serializer_class = ToDoSerializer
-
-
-class ToDoCreateView(generics.CreateAPIView):  # Create
-    queryset = ToDo.objects.all()
-    serializer_class = ToDoSerializer
-
-
-class ToDoDeleteView(generics.DestroyAPIView):  # Delete
-    queryset = ToDo.objects.all()
-    serializer_class = ToDoSerializer
+class TodoViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
