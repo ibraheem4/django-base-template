@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
-from django.urls import re_path as url
+from django.urls import path
 from django.conf.urls import include
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
@@ -27,24 +27,24 @@ from apps.core import views as core_views
 from apps.users import views as user_views
 
 urlpatterns = [
-    url(r"^accounts/", include("allauth.urls"), name="socialaccount_signup"),
-    url(r"^api/", include(api_router.urls)),
-    url(r"^api/users/me/$", user_views.CurrentUserView.as_view(), name="me"),
-    url(r"^api/session/", include("rest_framework.urls", namespace="rest_framework")),
-    url(r"^api/dj-rest-auth/", include("dj_rest_auth.urls")),
-    url(r"^api/dj-rest-auth/registration/", include("dj_rest_auth.registration.urls")),
-    url(
-        r"^api/dj-rest-auth/facebook/",
+    path("accounts/", include("allauth.urls"), name="socialaccount_signup"),
+    path("api/", include(api_router.urls)),
+    path("api/users/me/", user_views.CurrentUserView.as_view(), name="me"),
+    path("api/session/", include("rest_framework.urls", namespace="rest_framework")),
+    path("api/dj-rest-auth/", include("dj_rest_auth.urls")),
+    path("api/dj-rest-auth/registration/", include("dj_rest_auth.registration.urls")),
+    path(
+        "api/dj-rest-auth/facebook/",
         user_views.FacebookLoginView.as_view(),
         name="fb_login",
     ),
-    url(
-        r"^api/dj-rest-auth/google/",
+    path(
+        "api/dj-rest-auth/google/",
         user_views.GoogleLoginView.as_view(),
         name="google_login",
     ),
-    url(
-        r"^openapi/$",
+    path(
+        "openapi/",
         get_schema_view(
             title="project_name API",
             description="API backend for project_name",
@@ -56,12 +56,12 @@ urlpatterns = [
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += i18n_patterns(
-    url(r"^admin/", admin.site.urls, name="admin"),
-    url(r"^$", core_views.index, name="index"),
+    path("admin/", admin.site.urls, name="admin"),
+    path("", core_views.index, name="index"),
     prefix_default_language=False,
 )
 
 if settings.DEBUG:
     import debug_toolbar
 
-    urlpatterns += (url(r"^__debug__/", include(debug_toolbar.urls)),)
+    urlpatterns += (path("__debug__/", include(debug_toolbar.urls)),)
