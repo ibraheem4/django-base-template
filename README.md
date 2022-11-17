@@ -49,18 +49,6 @@ Verify project is serving on localhost.
 
 ## Running / Development [](#running-developing)
 
-### Running the template itself [](#running-the-template-itself)
-
-The template variables must first be replaced with a valid project name (e.g. `project_name`) to run the `django-base-template` project itself.
-
-#### Restore template variables [](#restore-template-variables)
-
-Run the `demo:restore` command to restore the template variables after running the `django-base-template` project.
-
-**IMPORTANT:** do this before committing to version control to ensure template variables have not been changed.
-
-- `yarn demo:restore`
-
 ### Setup Database [](#setup-database)
 
 Generate a SQLite database (`django_base_template/django_base_template/db.sqlite3`) and load initial fixture data.
