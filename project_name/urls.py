@@ -22,16 +22,17 @@ from django.contrib import admin
 from rest_framework.schemas import get_schema_view
 from rest_framework.schemas.openapi import SchemaGenerator
 
-from apps.api.views import api_router
-from apps.core import views as core_views
-from apps.users import views as user_views
+from apps.api.views import router as api_router
 from apps.core.urls import router as core_router
 from apps.users.urls import router as users_router
 from apps.todos.urls import router as todos_router
+from apps.core import views as core_views
+from apps.users import views as user_views
 
 from patches import routers
 
 apps_router = routers.DefaultRouter()
+apps_router.extend(api_router)
 apps_router.extend(core_router)
 apps_router.extend(users_router)
 apps_router.extend(todos_router)
