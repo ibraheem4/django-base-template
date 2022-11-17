@@ -29,13 +29,12 @@ from apps.todos.urls import router as todos_router
 
 from patches import routers
 
-router = routers.DefaultRouter()
-router.extend(todos_router)
+apps_router = routers.DefaultRouter()
+apps_router.extend(todos_router)
 
 urlpatterns = [
     path("accounts/", include("allauth.urls"), name="socialaccount_signup"),
     path("api/", include(api_router.urls)),
-    path("", include(router.urls)),
     path("api/users/me/", user_views.CurrentUserView.as_view(), name="me"),
     path("api/session/", include("rest_framework.urls", namespace="rest_framework")),
     path("api/dj-rest-auth/", include("dj_rest_auth.urls")),
@@ -65,6 +64,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path("admin/", admin.site.urls, name="admin"),
     path("", core_views.index, name="index"),
+    path("", include(apps_router.urls)),
     prefix_default_language=False,
 )
 
