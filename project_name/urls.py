@@ -25,10 +25,17 @@ from rest_framework.schemas.openapi import SchemaGenerator
 from apps.api.views import api_router
 from apps.core import views as core_views
 from apps.users import views as user_views
+from apps.todos.urls import router as todos_router
+
+from patches import routers
+
+router = routers.DefaultRouter()
+router.extend(todos_router)
 
 urlpatterns = [
     path("accounts/", include("allauth.urls"), name="socialaccount_signup"),
     path("api/", include(api_router.urls)),
+    path("", include(router.urls)),
     path("api/users/me/", user_views.CurrentUserView.as_view(), name="me"),
     path("api/session/", include("rest_framework.urls", namespace="rest_framework")),
     path("api/dj-rest-auth/", include("dj_rest_auth.urls")),
