@@ -26,4 +26,4 @@ class SiteViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
 
 
 def index(request):
-    return render(request, "core/index.html")
+    return render(request, "index.html")
