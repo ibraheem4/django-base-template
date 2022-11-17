@@ -31,7 +31,7 @@ from apps.users import views as user_views
 
 from patches import routers
 
-apps_router = routers.DefaultRouter()
+apps_router = routers.DefaultRouter(trailing_slash=False)
 apps_router.extend(api_router)
 apps_router.extend(core_router)
 apps_router.extend(users_router)
