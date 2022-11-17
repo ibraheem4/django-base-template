@@ -5,7 +5,7 @@ from apps.users.views import UserViewSet
 from apps.todos.views import TodoViewSet
 
 # Register the API viewset
-api_router = routers.DefaultRouter(trailing_slash=False)
+api_router = routers.DefaultRouter()
 
 # project_name API routes
 api_router.register(r"users", UserViewSet)
