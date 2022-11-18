@@ -1,5 +1,4 @@
 from django.contrib.sites.models import Site
-from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.renderers import BrowsableAPIRenderer
@@ -23,7 +22,3 @@ class SiteViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
         JSONAPIRenderer,
         BrowsableAPIRenderer,
     )  # pylint: disable=duplicate-code
-
-
-def index(request):
-    return render(request, "index.html")

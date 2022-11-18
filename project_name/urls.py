@@ -26,7 +26,7 @@ from apps.api.views import router as api_router
 from apps.core.urls import router as core_router
 from apps.users.urls import router as users_router
 from apps.todos.urls import router as todos_router
-from apps.core import views as core_views
+from project_name import views as project_views
 from apps.users import views as user_views
 
 from patches import routers
@@ -68,7 +68,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path("admin/", admin.site.urls, name="admin"),
-    path("", core_views.index, name="index"),
+    path("", project_views.index, name="index"),
     path("", include(apps_router.urls)),
     prefix_default_language=False,
 )
