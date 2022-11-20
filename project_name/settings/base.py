@@ -97,6 +97,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 TEMPLATES[0]["DIRS"] = [
     TEMPLATES_DIR,
 ]
+ASSETS_DIR = os.path.join(BASE_DIR, "assets")
+
+STATICFILES_DIRS = (ASSETS_DIR,)
 
 # JSON API serializer dasherizes attribute keys by default
 JSON_API_FORMAT_FIELD_NAMES = "dasherize"
