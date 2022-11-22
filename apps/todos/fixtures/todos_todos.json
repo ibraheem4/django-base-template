@@ -4,9 +4,7 @@
     "pk": 1,
     "fields": {
       "title": "This is a To Do",
-      "description": "I have something to do",
-      "date": "2022-11-13",
-      "completed": false
+      "is_completed": false
     }
   },
   {
@@ -14,9 +12,7 @@
     "pk": 2,
     "fields": {
       "title": "Something that's done",
-      "description": "A done item",
-      "date": "2022-11-18",
-      "completed": true
+      "is_completed": true
     }
   }
 ]

@@ -40,10 +40,10 @@ apps_router.extend(todos_router)
 urlpatterns = [
     path("accounts/", include("allauth.urls"), name="socialaccount_signup"),
     path("api/", include(api_router.urls)),
-    path("api/users/me/", user_views.CurrentUserView.as_view(), name="me"),
     path("api/session/", include("rest_framework.urls", namespace="rest_framework")),
     path("api/dj-rest-auth/", include("dj_rest_auth.urls")),
     path("api/dj-rest-auth/registration/", include("dj_rest_auth.registration.urls")),
+    path("api/users/me/", user_views.CurrentUserView.as_view(), name="me"),
     path(
         "api/dj-rest-auth/facebook/",
         user_views.FacebookLoginView.as_view(),
