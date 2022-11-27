@@ -22,12 +22,12 @@ from django.contrib import admin
 from rest_framework.schemas import get_schema_view
 from rest_framework.schemas.openapi import SchemaGenerator
 
-from apps.api.views import router as api_router
-from apps.core.urls import router as core_router
-from apps.users.urls import router as users_router
-from apps.todos.urls import router as todos_router
+from project_name.apps.api.views import router as api_router
+from project_name.apps.core.urls import router as core_router
+from project_name.apps.users.urls import router as users_router
+from project_name.apps.todos.urls import router as todos_router
 from project_name import views as project_views
-from apps.users import views as user_views
+from project_name.apps.users import views as user_views
 
 from patches import routers
 

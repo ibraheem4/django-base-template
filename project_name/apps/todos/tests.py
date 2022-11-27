@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 
-from apps.todos.models import Todo
+from project_name.apps.todos.models import Todo
 
 
 class TodoModelTest(TestCase):

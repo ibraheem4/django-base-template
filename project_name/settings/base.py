@@ -33,9 +33,9 @@ INSTALLED_APPS += (
     "allauth.socialaccount.providers.facebook",
     "allauth.socialaccount.providers.google",
     # Local
-    "apps.core",
-    "apps.users",
-    "apps.todos",
+    "project_name.apps.core",
+    "project_name.apps.users",
+    "project_name.apps.todos",
 )
 AUTH_USER_MODEL = "users.User"
 REST_USE_JWT = True
@@ -59,7 +59,7 @@ TEMPLATES[0]["OPTIONS"]["context_processors"] = [
     "django.template.context_processors.request",
     "django.contrib.auth.context_processors.auth",
     "django.contrib.messages.context_processors.messages",
-    "apps.core.context_processors.sitewide",
+    "project_name.apps.core.context_processors.sitewide",
 ]
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"

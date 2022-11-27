@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.todos.models import Todo
+from project_name.apps.todos.models import Todo
 
 # Register your models here.
 

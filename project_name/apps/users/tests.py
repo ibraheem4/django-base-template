@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 
-from apps.users.permissions import IsOwnerOrReadOnly
+from project_name.apps.users.permissions import IsOwnerOrReadOnly
 
 
 class UserManagerTests(TestCase):
