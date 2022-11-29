@@ -23,7 +23,6 @@ from django.contrib import admin
 from rest_framework.schemas import get_schema_view
 from rest_framework.schemas.openapi import SchemaGenerator
 
-from project_name.apps.api.views import router as api_router
 from project_name.apps.core.urls import router as core_router
 from project_name.apps.users.urls import router as users_router
 from project_name.apps.todos.urls import router as todos_router
@@ -32,7 +31,6 @@ from project_name.apps.users import views as user_views
 from patches import routers
 
 apps_router = routers.DefaultRouter(trailing_slash=False)
-apps_router.extend(api_router)
 apps_router.extend(core_router)
 apps_router.extend(users_router)
 apps_router.extend(todos_router)
@@ -41,10 +39,14 @@ apps_router.extend(todos_router)
 urlpatterns = [
     path("", RedirectView.as_view(url="/api/", permanent=True)),
     path("accounts/", include("allauth.urls"), name="socialaccount_signup"),
-    path("api/", include(api_router.urls)),
     path("api/session/", include("rest_framework.urls", namespace="rest_framework")),
-    path("api/auth/", include("dj_rest_auth.urls")),
-    path("api/auth/registration/", include("dj_rest_auth.registration.urls")),
+    path("api/auth/", include("dj_rest_auth.urls", namespace="dj_rest_auth")),
+    path(
+        "api/auth/registration/",
+        include(
+            "dj_rest_auth.registration.urls", namespace="dj_rest_auth_registration"
+        ),
+    ),
     path("api/users/me/", user_views.CurrentUserView.as_view(), name="me"),
     path(
         "api/auth/facebook/",
@@ -57,7 +59,7 @@ urlpatterns = [
         name="google_login",
     ),
     path(
-        "openapi/",
+        "api/",
         get_schema_view(
             title="project_name API",
             description="API backend for project_name",

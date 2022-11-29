@@ -1,13 +1,9 @@
 from django.contrib.auth import get_user_model
-from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework import routers, generics, status
+from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from .serializers import (
-    MyTokenObtainPairSerializer,
-    RegisterSerializer,
-)
+from .serializers import RegisterSerializer
 
 
 @api_view(["GET", "POST"])
@@ -27,13 +23,6 @@ def test_endpoint(request):
 
 UserModel = get_user_model()
 
-# Register the API viewset
-router = routers.DefaultRouter(trailing_slash=False)
-
-
-class MyTokenObtainPairView(TokenObtainPairView):
-    serializer_class = MyTokenObtainPairSerializer
-
 
 class RegisterView(generics.CreateAPIView):
     queryset = UserModel.objects.all()
@@ -43,5 +32,5 @@ class RegisterView(generics.CreateAPIView):
 
 @api_view(["GET"])
 def get_routes(request):
-    routes = ["/api/token/", "/api/register/", "/api/token/refresh/"]
+    routes = ["/api/token/obtain/", "/api/register/", "/api/token/refresh/"]
     return Response(routes)
