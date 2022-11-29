@@ -68,6 +68,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path("admin/", admin.site.urls, name="admin"),
+    path("api/", include("project_name.apps.api.urls")),
     path("", project_views.index, name="index"),
     path("", include(apps_router.urls)),
     prefix_default_language=False,
