@@ -40,12 +40,10 @@ urlpatterns = [
     path("", RedirectView.as_view(url="/api/", permanent=True)),
     path("accounts/", include("allauth.urls"), name="socialaccount_signup"),
     path("api/session/", include("rest_framework.urls", namespace="rest_framework")),
-    path("api/auth/", include("dj_rest_auth.urls", namespace="dj_rest_auth")),
+    path("api/auth/", include("dj_rest_auth.urls")),
     path(
         "api/auth/registration/",
-        include(
-            "dj_rest_auth.registration.urls", namespace="dj_rest_auth_registration"
-        ),
+        include("dj_rest_auth.registration.urls"),
     ),
     path("api/users/me/", user_views.CurrentUserView.as_view(), name="me"),
     path(
