@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.urls import path
+from django.views.generic import RedirectView
 from django.conf.urls import include
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
@@ -26,7 +27,6 @@ from project_name.apps.api.views import router as api_router
 from project_name.apps.core.urls import router as core_router
 from project_name.apps.users.urls import router as users_router
 from project_name.apps.todos.urls import router as todos_router
-from project_name import views as project_views
 from project_name.apps.users import views as user_views
 
 from patches import routers
@@ -37,7 +37,9 @@ apps_router.extend(core_router)
 apps_router.extend(users_router)
 apps_router.extend(todos_router)
 
+
 urlpatterns = [
+    path("", RedirectView.as_view(url="/api/", permanent=True)),
     path("accounts/", include("allauth.urls"), name="socialaccount_signup"),
     path("api/", include(api_router.urls)),
     path("api/session/", include("rest_framework.urls", namespace="rest_framework")),
@@ -69,7 +71,6 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path("admin/", admin.site.urls, name="admin"),
     path("api/", include("project_name.apps.api.urls")),
-    path("", project_views.index, name="index"),
     path("", include(apps_router.urls)),
     prefix_default_language=False,
 )
