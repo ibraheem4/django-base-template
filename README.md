@@ -1,6 +1,6 @@
 # [django-base-template](https://github.com/ibraheem4/django-base-template) &middot; [![Continuous Integration](https://github.com/ibraheem4/django-base-template/workflows/Continuous%20Integration/badge.svg)](https://github.com/ibraheem4/django-base-template/actions?query=workflow%3A%22Continuous+Integration%22)
 
-*NOTE:* This app runs on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
+_NOTE:_ This app runs on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
 
 ## Prerequisites [](#prerequisites)
 
@@ -15,14 +15,12 @@
 - [Pipenv](https://pypi.org/project/pipenv/)
 - [Google Chrome](https://google.com/chrome/)
 - [Homebrew](https://brew.sh)
-- [Perl](https://www.perl.org)
-- [hub](https://github.com/github/hub)
 
 ## Quickstart [](#quickstart)
 
 ### Include `.env` [](#include-dotenv)
 
-Include `.env` file to set environment variables.  `.env.example` is included as an example.
+Include `.env` file to set environment variables. `.env.example` is included as an example.
 
 ### Update FIXME [](#update-fixme)
 
