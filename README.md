@@ -4,21 +4,25 @@ _NOTE:_ This app runs on SSL, so the default commands (e.g. `yarn start`) will s
 
 ## Prerequisites [](#prerequisites)
 
-1. Buy an Apple computer.
-2. Install the following on your computer.
+Before running this application, ensure that you have the following installed:
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [Django](https://www.djangoproject.com/)
-- [Python](https://www.python.org/)
+- [Python 3.x](https://www.python.org/downloads/)
 - [Pipenv](https://pypi.org/project/pipenv/)
 - [Google Chrome](https://google.com/chrome/)
 - [Homebrew](https://brew.sh)
 
+## Installation
+
+1. Clone the repository or download the source code.
+2. Open a terminal or command prompt and navigate to the project directory.
+
 ## Quickstart [](#quickstart)
 
-### Include `.env` [](#include-dotenv)
+### Update Environment Variables [](#update-environment-variables)
 
 Include `.env` file to set environment variables. `.env.example` is included as an example.
 
