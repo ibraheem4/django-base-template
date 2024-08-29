@@ -19,6 +19,7 @@ Before running this application, ensure that you have the following installed:
 
 1. Clone the repository or download the source code.
 2. Open a terminal or command prompt and navigate to the project directory.
+3. Run `yarn install` to install the project dependencies.
 
 ## Quickstart [](#quickstart)
 
