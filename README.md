@@ -91,3 +91,7 @@ Perform linting.
 - [Conventional Commits](https://www.conventionalcommits.org)
 - [The Twelve-Factor App](https://12factor.net)
 - [Daphne](https://github.com/django/daphne)
+- [GitHub Actions](https://github.com/features/actions)
+- [Husky](https://typicode.github.io/husky/)
+- [Pipenv](https://pypi.org/project/pipenv/)
+- [Pytest](https://docs.pytest.org/en/stable/)
