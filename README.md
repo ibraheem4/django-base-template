@@ -7,7 +7,7 @@ _NOTE:_ This app runs on SSL, so the default commands (e.g. `yarn start`) will s
 Before running this application, ensure that you have the following installed:
 
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/)
+- [Node.js 22.9.0](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [Django](https://www.djangoproject.com/)
 - [Python 3.12.6](https://www.python.org/downloads/)

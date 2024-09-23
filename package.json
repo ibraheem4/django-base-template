@@ -30,7 +30,7 @@
     "test": "pipenv run pytest"
   },
   "engines": {
-    "node": "10.* || >= 12"
+    "node": "22.9.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.2.0",
