@@ -11,9 +11,6 @@ jobs:
         os:
           - ubuntu-latest
         python-version:
-          - 3.9.20
-          - 3.10.15
-          - 3.11.10
           - 3.12.6
     steps:
       - name: Checkout the repo
