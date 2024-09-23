@@ -16,6 +16,8 @@ if DEBUG is True:
         "SHOW_TOOLBAR_CALLBACK": lambda request: True,
     }
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 INSTALLED_APPS += (
     # Django
     "django.contrib.sites",
@@ -42,7 +44,7 @@ AUTH_USER_MODEL = "users.User"
 REST_USE_JWT = True
 JWT_AUTH_COOKIE = "jwt-auth"
 
-SITE_ID = DEFAULT_SITE_ID = os.environ.get("SITE_ID", 1)
+SITE_ID = int(os.environ.get("SITE_ID", 1))
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
@@ -149,10 +151,10 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 EMAIL_HOST = os.environ.get("EMAIL_HOST", "localhost").strip()
 EMAIL_USE_TLS = bool(os.environ.get("EMAIL_USE_TLS", False))
-EMAIL_PORT = int(os.environ.get("EMAIL_HOST_PORT", 25))
+EMAIL_PORT = int(os.environ.get("EMAIL_PORT", 25))
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "").strip()
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "").strip()
-DEFAULT_FROM_EMAIL = "Fixme Example <noreply@example.com>"
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "").strip()
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",

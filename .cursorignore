@@ -1,0 +1,79 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# Database
+*.sqlite3
+
+# Static files
+/static/
+/staticfiles/
+
+# Media files
+/media/
+
+# Environment variables
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Node modules
+node_modules/
+
+# Compiled JavaScript
+*.js.map
+
+# SSL certificates
+ssl/
+
+# Webpack stats
+webpack-stats.json
+webpack-stats-prod.json
+
+# Yarn error logs
+yarn-error.log
+
+# Django migrations
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Fixture files
+**/fixtures/*.json
+
+# Configuration files
+pytest.ini
+.coveragerc
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# Pipenv files
+Pipfile.lock
+
+# Pytest cache
+.pytest_cache/
+
+# Django collected static files
+/collected_static/
+
+# Ignore all .gitkeep files
+**/.gitkeep

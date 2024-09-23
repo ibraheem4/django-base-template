@@ -72,16 +72,35 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "project_name.wsgi.application"
 
+# Database configuration
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+DB_ENGINE = os.environ.get("DB_ENGINE", "sqlite")
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+if DB_ENGINE == "postgres":
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.environ.get("DB_NAME"),
+            "USER": os.environ.get("DB_USER"),
+            "PASSWORD": os.environ.get("DB_PASSWORD"),
+            "HOST": os.environ.get("DB_HOST", "localhost"),
+            "PORT": os.environ.get("DB_PORT", "5432"),
+        }
     }
-}
+else:  # Default to SQLite
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
+
+# Validate PostgreSQL configuration
+if DB_ENGINE == "postgres":
+    required_settings = ["DB_NAME", "DB_USER", "DB_PASSWORD"]
+    missing_settings = [setting for setting in required_settings if not os.environ.get(setting)]
+    if missing_settings:
+        raise ValueError(f"Missing required PostgreSQL settings: {', '.join(missing_settings)}")
 
 
 # Password validation
