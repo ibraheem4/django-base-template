@@ -6,3 +6,6 @@ min-similarity-lines=8
 ignore-comments=yes
 ignore-docstrings=yes
 ignore-imports=yes
+
+[DESIGN]
+max-parents=10
