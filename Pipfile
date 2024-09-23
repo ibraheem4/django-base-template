@@ -8,14 +8,14 @@ verify_ssl = true
 
 [dev-packages]
 pycodestyle = "*"
-black = "==21.7b0"
+black = ">=24.3.0"
 isort = "*"
 
 [packages]
 cryptography = ">=41.0.0"
 django = ">=4.2"
 djangorestframework = "*"
-djangorestframework-simplejwt = ">=5.2.0"
+djangorestframework-simplejwt = ">=5.3.1"
 dj-rest-auth = {extras = ["with_social"],version = "*"}
 django-allauth = "*"
 django-cors-headers = "*"
