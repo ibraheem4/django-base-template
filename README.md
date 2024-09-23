@@ -10,7 +10,7 @@ Before running this application, ensure that you have the following installed:
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [Django](https://www.djangoproject.com/)
-- [Python 3.x](https://www.python.org/downloads/)
+- [Python 3.12](https://www.python.org/downloads/)
 - [Pipenv](https://pypi.org/project/pipenv/)
 - [Google Chrome](https://google.com/chrome/)
 - [Homebrew](https://brew.sh)
