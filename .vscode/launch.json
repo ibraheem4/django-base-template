@@ -6,7 +6,7 @@
   "configurations": [
     {
       "name": "Start Django SSL",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/.venv/bin/daphne",
       "args": [
@@ -29,7 +29,7 @@
     },
     {
       "name": "Start Django",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/.venv/bin/daphne",
       "args": [
