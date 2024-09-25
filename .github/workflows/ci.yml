@@ -45,32 +45,39 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "${{ matrix.node-version }}"
-      - name: Get Yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Cache Yarn cache
-        id: cache-yarn-cache
-        uses: actions/cache@v4
-        with:
-          path: "${{ steps.yarn-cache-dir-path.outputs.dir }}"
-          key: ${{ runner.os }}-${{ matrix.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-yarn-
       - name: Cache node_modules
         id: cache-node-modules
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.11.0
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
       - name: Install dependencies
-        run: yarn install --pure-lockfile
+        run: pnpm install --frozen-lockfile
         if: |
-          steps.cache-yarn-cache.outputs.cache-hit != 'true' ||
+          steps.cache-pnpm-store.outputs.cache-hit != 'true' ||
           steps.cache-node-modules.outputs.cache-hit != 'true'
       - name: Run Linting
-        run: yarn lint
+        run: pnpm lint
       - name: Run tests
-        run: |
-          yarn test
+        run: pnpm test

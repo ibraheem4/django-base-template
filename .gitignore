@@ -80,3 +80,7 @@ fabric.properties
 .idea/httpRequests
 
 .yarn
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-store/

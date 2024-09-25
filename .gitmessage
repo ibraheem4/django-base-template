@@ -9,7 +9,7 @@
 # Type:
 
 #    build      (building project, upgrade/downgrade dependencies)
-#    chore      (updating yarn tasks etc; no production code change)
+#    chore      (updating npm tasks etc; no production code change)
 #    ci         (changing ci workflows)
 #    docs       (changes to documentation, README)
 #    feat       (new feature)

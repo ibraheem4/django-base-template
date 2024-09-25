@@ -7,8 +7,8 @@ else
     echo "Using SQLite. PostgreSQL dependencies are available if needed."
 fi
 
-yarn pipenv:install && \
-yarn migrate:run-syncdb && \
-yarn collectstatic && \
-yarn load-fixtures && \
-yarn start
+pnpm pipenv:install && \
+pnpm migrate:run-syncdb && \
+pnpm collectstatic && \
+pnpm load-fixtures && \
+pnpm start

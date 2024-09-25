@@ -1,6 +1,6 @@
 # [django-base-template](https://github.com/ibraheem4/django-base-template) &middot; [![Continuous Integration](https://github.com/ibraheem4/django-base-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ibraheem4/django-base-template/actions?query=workflow%3A%22Continuous+Integration%22)
 
-_NOTE:_ This app runs on SSL, so the default commands (e.g. `yarn start`) will serve via HTTPS on localhost.
+_NOTE:_ This app runs on SSL, so the default commands (e.g. `pnpm start`) will serve via HTTPS on localhost.
 
 ## Prerequisites [](#prerequisites)
 
@@ -8,7 +8,7 @@ Before running this application, ensure that you have the following installed:
 
 - [Git](https://git-scm.com/)
 - [Node.js 22.9.0](https://nodejs.org/)
-- [Yarn](https://yarnpkg.com/)
+- [pnPM](https://pnpm.io)
 - [Django](https://www.djangoproject.com/)
 - [Python 3.12.6](https://www.python.org/downloads/)
 - [Pipenv](https://pypi.org/project/pipenv/)
@@ -19,7 +19,7 @@ Before running this application, ensure that you have the following installed:
 
 1. Clone the repository or download the source code.
 2. Open a terminal or command prompt and navigate to the project directory.
-3. Run `yarn install` to install the project dependencies.
+3. Run `pnpm install` to install the project dependencies.
 
 ## Quickstart [](#quickstart)
 
@@ -56,14 +56,14 @@ Verify project is serving on localhost.
 
 Generate a SQLite database (`django_base_template/django_base_template/db.sqlite3`) and load initial fixture data.
 
-- `yarn migrate:run-syncdb`
-- `yarn load-fixtures`
+- `pnpm migrate:run-syncdb`
+- `pnpm load-fixtures`
 
 ### Collect static files [](#collect-static-files)
 
 Run the `collectstatic` management command.
 
-- `yarn collectstatic`
+- `pnpm collectstatic`
 
 > Visit your API at [https://localhost:8000/api](https://localhost:8000/api)
 
@@ -71,8 +71,8 @@ Run the `collectstatic` management command.
 
 Run some tests.
 
-- `yarn test`
-- `yarn coverage:html`
+- `pnpm test`
+- `pnpm coverage:html`
 
 > Open `htmlcov/index.html` in the web browser.
 
@@ -80,7 +80,7 @@ Run some tests.
 
 Perform linting.
 
-- `yarn lint`
+- `pnpm lint`
 
 ### Git commit template [](#git-commit-template)
 
