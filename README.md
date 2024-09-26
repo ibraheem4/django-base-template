@@ -20,6 +20,19 @@ Before running this application, ensure that you have the following installed:
 1. Clone the repository or download the source code.
 2. Open a terminal or command prompt and navigate to the project directory.
 3. Run `pnpm install` to install the project dependencies.
+4. Create a virtual environment:
+   ```
+   python -m venv .venv
+   ```
+5. Activate the virtual environment:
+   - On macOS and Linux:
+     ```
+     source .venv/bin/activate
+     ```
+   - On Windows:
+     ```
+     .venv\Scripts\activate
+     ```
 
 ## Quickstart [](#quickstart)
 
