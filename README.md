@@ -25,14 +25,18 @@ Before running this application, ensure that you have the following installed:
    python -m venv .venv
    ```
 5. Activate the virtual environment:
-   - On macOS and Linux:
-     ```
-     source .venv/bin/activate
-     ```
-   - On Windows:
-     ```
-     .venv\Scripts\activate
-     ```
+
+   On macOS and Linux:
+
+   ```
+   source .venv/bin/activate
+   ```
+
+   On Windows:
+
+   ```
+   .venv\Scripts\activate
+   ```
 
 ## Quickstart [](#quickstart)
 
