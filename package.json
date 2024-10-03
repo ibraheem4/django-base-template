@@ -27,7 +27,8 @@
     "shell": "pipenv run python manage.py shell",
     "start": "pipenv run daphne -e ssl:8000:privateKey=ssl/server.key:certKey=ssl/server.crt project_name.asgi:application",
     "start:ssl-disabled": "pipenv run daphne project_name.asgi:application",
-    "test": "pipenv run pytest"
+    "test": "pipenv run pytest",
+    "prepare": "husky install"
   },
   "engines": {
     "node": "22.9.0"
